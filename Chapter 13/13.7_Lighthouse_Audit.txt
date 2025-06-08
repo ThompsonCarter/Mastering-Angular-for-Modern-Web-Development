@@ -1,0 +1,3 @@
+Open Chrome DevTools → Lighthouse.
+Select Progressive Web App, Performance, SEO.
+Run audit and review scores.

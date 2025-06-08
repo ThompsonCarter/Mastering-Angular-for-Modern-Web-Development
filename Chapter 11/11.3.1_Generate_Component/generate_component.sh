@@ -1,0 +1,1 @@
+ng generate component product-gallery --standalone --export

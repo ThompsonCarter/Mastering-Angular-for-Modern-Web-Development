@@ -1,0 +1,7 @@
+"navigationUrls": [
+  { "positive": true, "regex": "/.*" },
+  { "positive": false, "regex": "/api/.*" }
+],
+"fallbacks": {
+  "index": "/offline.html"
+}

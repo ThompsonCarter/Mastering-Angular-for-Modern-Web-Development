@@ -1,0 +1,11 @@
+
+    Mock dependencies in unit tests; use real services in integration tests.
+
+    Keep E2E tests minimal—critical paths only.
+
+    Fail fast: run Jest before Cypress in CI.
+
+    Snapshot test only stable DOM structures.
+
+    Use data-cy attributes for selectors in Cypress.
+    

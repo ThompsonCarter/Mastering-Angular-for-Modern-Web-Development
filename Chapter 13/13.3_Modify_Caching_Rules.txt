@@ -1,0 +1,5 @@
+{
+  "name": "news",
+  "urls": ["https://news.example.com/latest"],
+  "cacheConfig": { "strategy": "performance", "maxSize": 10, "maxAge": "6h" }
+}

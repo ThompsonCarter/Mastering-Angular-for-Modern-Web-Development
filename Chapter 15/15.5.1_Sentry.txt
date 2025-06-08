@@ -1,0 +1,5 @@
+npm install @sentry/angular @sentry/tracing
+
+import * as Sentry from '@sentry/angular-ivy';
+Sentry.init({ dsn: 'https://XYZ@sentry.io/123', tracesSampleRate: 0.2 });
+    

@@ -1,0 +1,5 @@
+{
+  "scripts": {
+    "sync:tokens": "node sync-tokens.js"
+  }
+}

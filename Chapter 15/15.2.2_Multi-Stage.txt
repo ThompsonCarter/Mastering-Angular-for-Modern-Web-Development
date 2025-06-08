@@ -1,0 +1,14 @@
+# Stage 1 – build
+FROM node:20 AS build
+WORKDIR /app
+COPY package*.json .
+RUN npm ci
+COPY . .
+RUN npm run build:ssr
+
+# Stage 2 – runtime
+FROM gcr.io/distroless/node20
+WORKDIR /app
+COPY --from=build /app/dist ./dist
+CMD ["dist/server.js"]
+    

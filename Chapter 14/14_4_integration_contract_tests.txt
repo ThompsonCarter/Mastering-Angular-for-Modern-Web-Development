@@ -1,0 +1,46 @@
+
+    14.4.1 Angular Component Integration
+
+    Test ProductCard works with CartService.
+
+    ts
+    @Component({ /* uses CartService */ })
+    export class ProductCardComponent { /* ... */ }
+
+    describe('ProductCard + CartService', () => {
+      it('adds product to cart on click', async () => {
+        await render(ProductCardComponent, {
+          providers: [CartService]
+        });
+        // fire click and assert CartService call
+      });
+    });
+
+    14.4.2 Contract Testing with Pact
+
+    Install:
+
+    bash
+    npm install -D @pact-foundation/pact @pact-foundation/pact-web
+
+    Define Consumer Test:
+
+    ts
+    import { Pact } from '@pact-foundation/pact';
+
+    const provider = new Pact({ consumer: 'CartApp', provider: 'ProductAPI' });
+
+    provider
+      .addInteraction({
+        uponReceiving: 'a request for product list',
+        withRequest: { method: 'GET', path: '/products' },
+        willRespondWith: {
+          status: 200,
+          body: [{ id: '1', name: 'Widget' }]
+        }
+      })
+      .then(() => fetchProducts())
+      .then(() => provider.verify());
+
+    Publish Pact to broker; provider service must pass provider tests to stay compatible.
+    

@@ -1,0 +1,2 @@
+Install SDK, export to OTLP endpoint; add HTTP and Router instrumentation snippets.
+    

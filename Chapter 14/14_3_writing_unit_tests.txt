@@ -1,0 +1,28 @@
+
+    Service: cart.service.ts
+
+    ts
+    @Injectable({ providedIn: 'root' })
+    export class CartService {
+      private items: Item[] = [];
+      add(item: Item) { this.items.push(item); }
+      total() { return this.items.reduce((s, i) => s + i.price, 0); }
+    }
+
+    Test cart.service.spec.ts
+
+    ts
+    describe('CartService', () => {
+      let service: CartService;
+
+      beforeEach(() => {
+        service = new CartService();
+      });
+
+      it('adds items and calculates total', () => {
+        service.add({ id: '1', name: 'Widget', price: 10 });
+        service.add({ id: '2', name: 'Gadget', price: 15 });
+        expect(service.total()).toBe(25);
+      });
+    });
+    

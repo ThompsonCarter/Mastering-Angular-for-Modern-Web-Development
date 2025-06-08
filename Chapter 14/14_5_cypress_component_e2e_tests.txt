@@ -1,0 +1,40 @@
+
+    14.5.1 Installing Cypress
+
+    bash
+    ng add @cypress/schematic
+    npm run cy:open
+
+    14.5.2 Component Test
+    cypress/component/counter.cy.ts
+
+    ts
+    import CounterComponent from '../../../src/app/counter.component';
+
+    describe('CounterComponent', () => {
+      it('increments', () => {
+        cy.mount(CounterComponent);
+        cy.contains('+').click();
+        cy.contains('1');
+      });
+    });
+
+    14.5.3 End-to-End Flow
+    cypress/e2e/cart.cy.ts
+
+    ts
+    describe('Cart flow', () => {
+      it('adds and removes items', () => {
+        cy.visit('/');
+        cy.contains('Add to Cart').first().click();
+        cy.get('[data-cy=cart-count]').should('contain', '1');
+        cy.contains('Checkout').click();
+        cy.url().should('include', '/checkout');
+      });
+    });
+
+    Run headlessly in CI:
+
+    bash
+    npx cypress run --browser chrome
+    

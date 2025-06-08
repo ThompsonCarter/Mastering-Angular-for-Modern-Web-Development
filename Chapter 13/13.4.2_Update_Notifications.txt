@@ -1,0 +1,7 @@
+constructor(swUpdate: SwUpdate) {
+  swUpdate.available.subscribe(() => {
+    if (confirm('New version available. Load new version?')) {
+      window.location.reload();
+    }
+  });
+}

@@ -1,0 +1,2 @@
+ng build --prod
+npx http-server ./dist/your-project-name

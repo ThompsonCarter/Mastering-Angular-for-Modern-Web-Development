@@ -1,0 +1,27 @@
+
+    Think of your application as a skyscraper. The foundation (unit tests) must be vast and rock-solid; the middle floors (integration/contract tests) ensure systems connect safely; and the penthouse (end-to-end tests) confirms the whole building works when people move in. Skimp on the foundation and cracks appear; focus only on the penthouse and you’ll spend fortunes maintaining failing lifts.
+
+    Our testing pyramid keeps costs low and confidence high:
+
+    Unit tests (Jest): Fast, isolated, run thousands in seconds.
+
+    Integration / contract tests: Verify components, services, or APIs work together.
+
+    E2E tests (Cypress): Simulate real users clicking buttons and filling forms.
+
+    In this chapter, we’ll:
+
+    Set up Jest as the primary unit-testing runner (replacing or alongside Karma).
+
+    Use Angular’s TestBed to create isolated component and service tests.
+
+    Add Cypress for component testing and full E2E flows.
+
+    Introduce Pact for consumer-driven contract testing between micro-frontends or services.
+
+    Build a sample cart feature and show how each test layer protects it.
+
+    Automate everything in GitHub Actions.
+
+    By the end, you’ll ship with confidence, knowing every brick is tested.
+    

@@ -1,0 +1,28 @@
+
+    Component: counter.component.ts
+
+    ts
+    @Component({
+      selector: 'app-counter',
+      template: `
+        <button (click)="inc()">+</button>
+        <p>{{ count }}</p>
+      `
+    })
+    export class CounterComponent {
+      count = 0;
+      inc() { this.count++; }
+    }
+
+    Test
+
+    ts
+    import { render } from '@testing-library/angular';
+
+    it('increments on click', async () => {
+      const { getByText } = await render(CounterComponent);
+      const button = getByText('+');
+      fireEvent.click(button);
+      expect(getByText('1')).toBeTruthy();
+    });
+    

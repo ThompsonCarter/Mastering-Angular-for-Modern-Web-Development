@@ -1,0 +1,6 @@
+import { LazyLoadImageModule } from 'ng-lazyload-image';
+
+@NgModule({ imports: [LazyLoadImageModule] })
+
+<!-- Template -->
+<img [lazyLoad]="image.url" [defaultImage]="'placeholder.png'" />
