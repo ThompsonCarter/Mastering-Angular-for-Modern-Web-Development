@@ -1,0 +1,1 @@
+npx create-nx-workspace@latest super-monorepo --preset=angular

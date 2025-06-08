@@ -1,0 +1,5 @@
+<cdk-virtual-scroll-viewport itemSize="50" class="viewport">
+  <div *cdkVirtualFor="let issue of issues$ | async">
+    {{issue.title}}
+  </div>
+</cdk-virtual-scroll-viewport>

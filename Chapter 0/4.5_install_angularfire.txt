@@ -1,0 +1,1 @@
+pnpm install @angular/fire firebase

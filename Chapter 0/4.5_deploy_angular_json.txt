@@ -1,0 +1,6 @@
+"deploy": {
+  "builder": "@angular/fire:deploy",
+  "options": {
+    "ssr": false
+  }
+}

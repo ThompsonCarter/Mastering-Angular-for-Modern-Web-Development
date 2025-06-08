@@ -1,0 +1,2 @@
+<h1>Hello, Enterprise!</h1>
+<p>Welcome to your first scalable Angular app.</p>

@@ -1,0 +1,10 @@
+"architect": {
+  "build": {
+    "options": {
+      "optimization": true,
+      "sourceMap": false,
+      "namedChunks": false,
+      "aot": true
+    }
+  }
+}
