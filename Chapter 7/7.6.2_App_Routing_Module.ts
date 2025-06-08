@@ -1,0 +1,1 @@
+{ path: 'reports', loadChildren: () => import('./features/reports/reports.module').then(m => m.ReportsModule) }

@@ -1,0 +1,52 @@
+<form [formGroup]="patientForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label>First Name:</label>
+    <input formControlName="firstName" />
+    <small *ngIf="f['firstName'].touched && f['firstName'].invalid">
+      <span *ngIf="f['firstName'].errors?.['required']">Required.</span>
+      <span *ngIf="f['firstName'].errors?.['minlength']">Minimum 2 characters.</span>
+    </small>
+  </div>
+
+  <div>
+    <label>Last Name:</label>
+    <input formControlName="lastName" />
+    <small *ngIf="f['lastName'].touched && f['lastName'].invalid">Last name is required.</small>
+  </div>
+
+  <div>
+    <label>Email:</label>
+    <input formControlName="email" />
+    <small *ngIf="f['email'].touched && f['email'].invalid">
+      <span *ngIf="f['email'].errors?.['email']">Invalid email.</span>
+      <span *ngIf="f['email'].errors?.['required']">Required.</span>
+    </small>
+  </div>
+
+  <div>
+    <label>Age:</label>
+    <input type="number" formControlName="age" />
+    <small *ngIf="f['age'].touched && f['age'].invalid">
+      <span *ngIf="f['age'].errors?.['min']">Age must be ≥ 0.</span>
+      <span *ngIf="f['age'].errors?.['max']">Age must be ≤ 130.</span>
+    </small>
+  </div>
+
+  <div formGroupName="address">
+    <label>Street:</label>
+    <input formControlName="street" />
+    <small *ngIf="addressGroup['street'].touched && addressGroup['street'].invalid">Street is required.</small>
+
+    <label>City:</label>
+    <input formControlName="city" />
+    <small *ngIf="addressGroup['city'].touched && addressGroup['city'].invalid">City required.</small>
+
+    <label>ZIP Code:</label>
+    <input formControlName="zip" />
+    <small *ngIf="addressGroup['zip'].touched && addressGroup['zip'].invalid">
+      <span *ngIf="addressGroup['zip'].errors?.['pattern']">Must be 5 digits.</span>
+    </small>
+  </div>
+
+  <button type="submit">Register</button>
+</form>

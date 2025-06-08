@@ -1,0 +1,4 @@
+<div *ngIf="items.length; else noItems">
+  <div *ngFor="let item of items">{{ item }}</div>
+</div>
+<ng-template #noItems>No items found.</ng-template>

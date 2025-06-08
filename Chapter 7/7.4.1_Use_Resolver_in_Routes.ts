@@ -1,0 +1,1 @@
+{ path: 'orders', component: OrderListComponent, resolve: { orders: OrderResolver } }

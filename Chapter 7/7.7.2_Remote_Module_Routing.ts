@@ -1,0 +1,1 @@
+{ path: 'cart', loadChildren: () => import('cart/CartModule').then(m => m.CartModule) }

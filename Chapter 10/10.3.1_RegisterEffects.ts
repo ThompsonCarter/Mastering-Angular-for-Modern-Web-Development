@@ -1,0 +1,1 @@
+EffectsModule.forRoot([CartEffects])

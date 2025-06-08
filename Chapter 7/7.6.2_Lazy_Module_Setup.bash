@@ -1,0 +1,1 @@
+ng generate module features/reports --route reports --module app

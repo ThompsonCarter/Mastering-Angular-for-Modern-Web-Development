@@ -1,0 +1,1 @@
+StoreModule.forRoot({ cart: cartReducer })

@@ -1,0 +1,1 @@
+StoreDevtoolsModule.instrument({ maxAge: 25 })

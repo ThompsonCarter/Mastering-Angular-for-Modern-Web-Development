@@ -1,0 +1,5 @@
+<ul>
+  <li *ngFor="let order of dataService.fetchOrders() | async">
+    {{ order.id }}: {{ order.amount }}
+  </li>
+</ul>

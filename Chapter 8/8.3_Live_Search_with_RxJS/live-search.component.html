@@ -1,0 +1,4 @@
+<input [formControl]="searchControl" placeholder="Search patients">
+<ul>
+  <li *ngFor="let patient of results$ | async">{{ patient.name }}</li>
+</ul>

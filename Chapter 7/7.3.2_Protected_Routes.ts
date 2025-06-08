@@ -1,0 +1,1 @@
+{ path: 'dashboard', component: DashboardComponent, canActivate: [LoginGuard] }

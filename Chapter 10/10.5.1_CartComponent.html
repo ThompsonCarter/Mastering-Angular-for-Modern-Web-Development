@@ -1,0 +1,4 @@
+<button (click)="store.addItem({ id: '1', name: 'Widget', quantity: 1 })">Add Widget</button>
+<ul>
+  <li *ngFor="let item of store.items$()">{{ item.name }} × {{ item.quantity }}</li>
+</ul>
